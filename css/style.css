@@ -10,6 +10,7 @@
   --accent: var(--base);
   --accent-hover: color-mix(in srgb, var(--base) 80%, white);
   --accent-dim: color-mix(in srgb, var(--base) 60%, black);
+  --backdrop: color-mix(in srgb, var(--bg) 90%, black);
 }
 
 * {
@@ -361,6 +362,7 @@ textarea {
 select {
   cursor: pointer;
   padding-right: 2rem;
+  /* SVG color #D74894 matches hsl(327, 73%, 50%) - CSS variables cannot be used in data URIs */
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%23D74894" d="M2 4l4 4 4-4z"/></svg>');
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -578,7 +580,7 @@ dialog {
 }
 
 dialog::backdrop {
-  background: color-mix(in srgb, var(--bg) 90%, black);
+  background: var(--backdrop);
 }
 
 /* Output */
