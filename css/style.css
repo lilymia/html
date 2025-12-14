@@ -11,6 +11,7 @@
   --accent-dark: hsl(330, 100%, 50%);
   --accent-light: hsl(330, 100%, 75%);
   --border: color-mix(in srgb, var(--accent) 40%, black 60%);
+  --secondary: hsl(280, 70%, 78%);
 }
 
 * {
@@ -79,7 +80,7 @@ strong, b {
 }
 
 em, i {
-  color: hsl(280, 70%, 80%);
+  color: var(--secondary);
   font-style: italic;
 }
 
@@ -139,7 +140,7 @@ abbr {
 }
 
 cite {
-  color: hsl(280, 70%, 75%);
+  color: var(--secondary);
   font-style: italic;
 }
 
@@ -156,7 +157,7 @@ var {
 }
 
 time {
-  color: hsl(280, 70%, 80%);
+  color: var(--secondary);
 }
 
 /* Lists */
@@ -627,7 +628,7 @@ figure {
 
 figcaption {
   margin-top: 0.5rem;
-  color: hsl(280, 70%, 75%);
+  color: var(--secondary);
   font-style: italic;
   text-align: center;
   font-size: 0.9em;
