@@ -22,12 +22,14 @@ html {
   --muted: color-mix(in srgb, var(--text) 70%, hsl(327, 25%, 62%) 30%);
   --border: color-mix(in srgb, var(--accent) 30%, var(--bg) 70%);
   --border-strong: color-mix(in srgb, var(--accent) 55%, var(--bg) 45%);
+  --thumb-border: color-mix(in srgb, var(--text) 40%, hsl(0, 0%, 100%) 60%);
+  --backdrop: color-mix(in srgb, var(--bg) 90%, hsl(0, 0%, 0%) 10%);
 }
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "Didot", "Garamond", "Palatino Linotype", "Georgia", "Times New Roman", serif;
+  font-family: "Didot", "Garamond", "Palatino Linotype", "Georgia", "Times", "Times New Roman", serif;
   line-height: 1.6;
   padding: 0.75rem;
   min-height: 100vh;
@@ -443,7 +445,7 @@ input[type="range"]::-webkit-slider-thumb {
   background: var(--accent-strong);
   border-radius: 50%;
   cursor: pointer;
-  border: 1px solid color-mix(in srgb, var(--text) 40%, hsl(0, 0%, 100%) 60%);
+  border: 1px solid var(--thumb-border);
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -452,7 +454,7 @@ input[type="range"]::-moz-range-thumb {
   background: var(--accent-strong);
   border-radius: 50%;
   cursor: pointer;
-  border: 1px solid color-mix(in srgb, var(--text) 40%, hsl(0, 0%, 100%) 60%);
+  border: 1px solid var(--thumb-border);
 }
 
 /* Color */
@@ -587,7 +589,7 @@ dialog {
 }
 
 dialog::backdrop {
-  background: color-mix(in srgb, var(--bg) 90%, hsl(0, 0%, 0%) 10%);
+  background: var(--backdrop);
 }
 
 /* Output */
