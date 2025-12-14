@@ -13,7 +13,7 @@ html {
 
 :root {
   --base: hsl(327, 73%, 30%);
-  --bg: color-mix(in srgb, var(--base) 45%, hsl(0, 0%, 0%) 100%);
+  --bg: color-mix(in srgb, var(--base) 45%, hsl(0, 0%, 0%) 55%);
   --panel: color-mix(in srgb, var(--bg) 70%, var(--base) 30%);
   --surface: color-mix(in srgb, var(--panel) 80%, hsl(327, 73%, 38%) 20%);
   --accent: color-mix(in srgb, var(--base) 35%, hsl(338, 80%, 62%) 65%);
@@ -488,7 +488,7 @@ input[type="reset"] {
   padding: 0.5rem 0.75rem;
   background: var(--accent);
   color: hsl(0, 0%, 100%);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 2px;
   font-family: inherit;
   font-size: 1rem;
