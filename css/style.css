@@ -1,18 +1,5 @@
-/* Hyper-Feminine Dark Theme with CSS Variables */
-
-:root {
-  --base: hsl(327, 73%, 30%);
-  --bg: color-mix(in srgb, var(--base) 20%, black 80%);
-  --bg-lighter: color-mix(in srgb, var(--base) 30%, black 70%);
-  --bg-darker: color-mix(in srgb, var(--base) 10%, black 90%);
-  --text: color-mix(in srgb, var(--base) 100%, white 90%);
-  --text-muted: color-mix(in srgb, var(--base) 80%, white 50%);
-  --accent: hsl(330, 100%, 65%);
-  --accent-dark: hsl(330, 100%, 50%);
-  --accent-light: hsl(330, 100%, 75%);
-  --border: color-mix(in srgb, var(--accent) 40%, black 60%);
-  --secondary: hsl(280, 70%, 78%);
-}
+/* Minimalistic Feminine Dark Theme */
+/* Base color: HSL pink - all colors derived from this */
 
 * {
   margin: 0;
@@ -25,8 +12,8 @@ html {
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background: hsl(290, 50%, 8%);
+  color: hsl(330, 100%, 90%);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.6;
   padding: 0.75rem;
@@ -40,7 +27,7 @@ body > div {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--accent-light);
+  color: hsl(330, 100%, 75%);
   font-weight: 600;
   margin: 0.75rem 0 0.5rem;
   line-height: 1.3;
@@ -58,77 +45,78 @@ p {
 }
 
 a {
-  color: var(--accent);
+  color: hsl(330, 100%, 70%);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: all 0.2s;
 }
 
 a:hover {
-  color: var(--accent-light);
-  border-bottom-color: var(--accent);
+  color: hsl(330, 100%, 80%);
+  border-bottom-color: hsl(330, 100%, 70%);
 }
 
 a:focus {
-  border-bottom-color: var(--accent-light);
-  background: var(--bg-lighter);
+  outline: 1px solid hsl(330, 100%, 70%);
+  outline-offset: 2px;
 }
 
 strong, b {
-  color: var(--accent-light);
+  color: hsl(330, 100%, 75%);
   font-weight: 700;
 }
 
 em, i {
-  color: var(--secondary);
+  color: hsl(280, 70%, 80%);
   font-style: italic;
 }
 
 code, kbd, samp {
-  background: var(--bg-lighter);
-  color: var(--text);
+  background: hsl(290, 50%, 15%);
+  color: hsl(330, 100%, 85%);
   padding: 0.125rem 0.25rem;
   border-radius: 2px;
   font-family: 'Courier New', monospace;
   font-size: 0.9em;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(330, 100%, 30%);
 }
 
 kbd {
-  border-color: var(--accent);
+  border: 1px solid hsl(330, 100%, 50%);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 mark {
-  background: color-mix(in srgb, var(--accent) 50%, black 50%);
-  color: var(--text);
+  background: hsl(330, 100%, 30%);
+  color: hsl(330, 100%, 95%);
   padding: 0.125rem 0.25rem;
   border-radius: 2px;
 }
 
 small {
   font-size: 0.875em;
-  color: var(--text-muted);
+  color: hsl(330, 70%, 70%);
 }
 
 sub, sup {
   font-size: 0.75em;
-  color: var(--accent-light);
+  color: hsl(330, 100%, 75%);
 }
 
 u {
   text-decoration: underline;
-  text-decoration-color: var(--accent);
+  text-decoration-color: hsl(330, 100%, 70%);
 }
 
 s, del {
   text-decoration: line-through;
-  color: var(--text-muted);
+  color: hsl(330, 50%, 60%);
   opacity: 0.7;
 }
 
 ins {
-  background: color-mix(in srgb, var(--accent) 30%, black 70%);
-  color: var(--text);
+  background: hsl(330, 100%, 20%);
+  color: hsl(330, 100%, 85%);
   text-decoration: none;
   padding: 0 0.125rem;
   border-radius: 2px;
@@ -140,24 +128,24 @@ abbr {
 }
 
 cite {
-  color: var(--secondary);
+  color: hsl(280, 70%, 75%);
   font-style: italic;
 }
 
 dfn {
-  color: var(--accent-light);
+  color: hsl(330, 100%, 75%);
   font-style: italic;
   font-weight: 600;
 }
 
 var {
-  color: var(--accent-light);
+  color: hsl(330, 100%, 80%);
   font-style: italic;
   font-family: 'Courier New', monospace;
 }
 
 time {
-  color: var(--secondary);
+  color: hsl(280, 70%, 80%);
 }
 
 /* Lists */
@@ -171,7 +159,7 @@ li {
 }
 
 dt {
-  color: var(--accent-light);
+  color: hsl(330, 100%, 75%);
   font-weight: 700;
   margin-top: 0.5rem;
 }
@@ -192,8 +180,8 @@ fieldset li {
 
 /* Blockquote */
 blockquote {
-  background: var(--bg-lighter);
-  border-left: 3px solid var(--accent);
+  background: hsl(290, 50%, 12%);
+  border-left: 3px solid hsl(330, 100%, 60%);
   padding: 0.75rem;
   margin: 0.75rem 0;
   border-radius: 2px;
@@ -214,17 +202,17 @@ blockquote cite {
 hr {
   border: none;
   height: 1px;
-  background: var(--border);
+  background: hsl(330, 100%, 40%);
   margin: 0.75rem 0;
 }
 
 /* Pre-formatted */
 pre {
-  background: var(--bg-lighter);
-  color: var(--text);
+  background: hsl(290, 50%, 12%);
+  color: hsl(330, 100%, 85%);
   padding: 0.75rem;
   border-radius: 2px;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(330, 100%, 30%);
   overflow-x: auto;
   margin: 0.5rem 0;
   font-family: 'Courier New', monospace;
@@ -243,8 +231,8 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 0.75rem 0;
-  background: var(--bg-darker);
-  border: 1px solid var(--border);
+  background: hsl(290, 50%, 10%);
+  border: 1px solid hsl(330, 100%, 30%);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -252,19 +240,19 @@ table {
 caption {
   padding: 0.5rem;
   font-weight: 600;
-  color: var(--accent-light);
+  color: hsl(330, 100%, 75%);
   text-align: left;
 }
 
 th, td {
   padding: 0.5rem 0.75rem;
   text-align: left;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid hsl(330, 100%, 20%);
 }
 
 thead th {
-  background: color-mix(in srgb, var(--accent) 50%, black 50%);
-  color: white;
+  background: hsl(330, 100%, 25%);
+  color: hsl(0, 0%, 100%);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.85em;
@@ -272,44 +260,44 @@ thead th {
 }
 
 tbody tr:nth-child(odd) {
-  background: var(--bg);
+  background: hsl(290, 50%, 11%);
 }
 
 tbody tr:hover {
-  background: var(--bg-lighter);
+  background: hsl(330, 100%, 15%);
 }
 
 tfoot th {
-  background: var(--bg-lighter);
-  color: var(--text);
+  background: hsl(290, 50%, 15%);
+  color: hsl(330, 100%, 80%);
   font-weight: 600;
 }
 
 /* Forms */
 form {
-  background: var(--bg-darker);
+  background: hsl(290, 50%, 10%);
   padding: 0.75rem;
   border-radius: 4px;
   margin: 0.75rem 0;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(330, 100%, 25%);
 }
 
 fieldset {
-  border: 1px solid var(--border);
+  border: 1px solid hsl(330, 100%, 30%);
   border-radius: 2px;
   padding: 0.75rem;
   margin: 0.75rem 0;
 }
 
 legend {
-  color: var(--accent-light);
+  color: hsl(330, 100%, 75%);
   font-weight: 700;
   padding: 0 0.25rem;
 }
 
 label {
   display: block;
-  color: var(--text);
+  color: hsl(330, 100%, 80%);
   font-weight: 500;
   margin-bottom: 0.25rem;
   font-size: 0.95em;
@@ -332,9 +320,9 @@ textarea,
 select {
   width: 100%;
   padding: 0.5rem 0.75rem;
-  background: var(--bg-lighter);
-  color: var(--text);
-  border: 1px solid var(--border);
+  background: hsl(290, 50%, 12%);
+  color: hsl(330, 100%, 90%);
+  border: 1px solid hsl(330, 100%, 30%);
   border-radius: 2px;
   font-family: inherit;
   font-size: 1rem;
@@ -344,13 +332,15 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 15%, var(--bg-lighter) 85%);
+  outline: none;
+  border-color: hsl(330, 100%, 60%);
+  box-shadow: 0 0 0 2px hsl(330, 100%, 30%);
+  background: hsl(290, 50%, 15%);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--text-muted);
+  color: hsl(330, 50%, 50%);
 }
 
 textarea {
@@ -373,8 +363,8 @@ input[type="radio"] {
   appearance: none;
   width: 1.25rem;
   height: 1.25rem;
-  border: 1px solid var(--accent);
-  background: var(--bg-lighter);
+  border: 1px solid hsl(330, 100%, 50%);
+  background: hsl(290, 50%, 12%);
   cursor: pointer;
   position: relative;
   transition: all 0.2s;
@@ -393,14 +383,8 @@ input[type="radio"] {
 
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-  background: var(--accent-dark);
-  border-color: var(--accent-light);
-}
-
-input[type="checkbox"]:focus,
-input[type="radio"]:focus {
-  border-color: var(--accent-light);
-  background: color-mix(in srgb, var(--accent) 20%, var(--bg-lighter) 80%);
+  background: hsl(330, 100%, 50%);
+  border-color: hsl(330, 100%, 60%);
 }
 
 input[type="checkbox"]:checked::after {
@@ -436,16 +420,17 @@ input[type="radio"]:disabled {
 input[type="range"] {
   width: 100%;
   height: 6px;
-  background: var(--bg-lighter);
+  background: hsl(290, 50%, 20%);
   border-radius: 3px;
-  border: 1px solid var(--border);
+  outline: none;
+  border: 1px solid hsl(330, 100%, 30%);
 }
 
 input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 18px;
   height: 18px;
-  background: var(--accent);
+  background: hsl(330, 100%, 60%);
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid white;
@@ -454,7 +439,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
   width: 18px;
   height: 18px;
-  background: var(--accent);
+  background: hsl(330, 100%, 60%);
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid white;
@@ -464,7 +449,7 @@ input[type="range"]::-moz-range-thumb {
 input[type="color"] {
   width: 60px;
   height: 40px;
-  border: 1px solid var(--accent);
+  border: 1px solid hsl(330, 100%, 50%);
   border-radius: 2px;
   cursor: pointer;
   padding: 0.25rem;
@@ -473,16 +458,16 @@ input[type="color"] {
 /* File */
 input[type="file"] {
   padding: 0.5rem;
-  background: var(--bg-lighter);
-  border: 1px dashed var(--accent);
+  background: hsl(290, 50%, 12%);
+  border: 1px dashed hsl(330, 100%, 50%);
   border-radius: 2px;
-  color: var(--text);
+  color: hsl(330, 100%, 85%);
   cursor: pointer;
 }
 
 input[type="file"]:hover {
-  border-color: var(--accent-light);
-  background: color-mix(in srgb, var(--accent) 15%, var(--bg-lighter) 85%);
+  border-color: hsl(330, 100%, 60%);
+  background: hsl(290, 50%, 15%);
 }
 
 /* Buttons */
@@ -491,7 +476,7 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"] {
   padding: 0.5rem 0.75rem;
-  background: var(--accent-dark);
+  background: hsl(330, 100%, 50%);
   color: white;
   border: none;
   border-radius: 2px;
@@ -506,7 +491,7 @@ button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover {
-  background: var(--accent);
+  background: hsl(330, 100%, 60%);
   transform: translateY(-1px);
 }
 
@@ -517,51 +502,38 @@ input[type="reset"]:active {
   transform: translateY(0);
 }
 
-button:focus,
-input[type="submit"]:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus {
-  background: var(--accent-light);
-}
-
 button:disabled,
 input[type="submit"]:disabled,
 input[type="button"]:disabled,
 input[type="reset"]:disabled {
-  background: var(--bg-lighter);
-  color: var(--text-muted);
+  background: hsl(290, 50%, 25%);
+  color: hsl(330, 50%, 50%);
   cursor: not-allowed;
   opacity: 0.6;
 }
 
 button[type="reset"],
 input[type="reset"] {
-  background: var(--bg-lighter);
-  color: var(--text);
-  border: 1px solid var(--border);
-}
-
-button[type="reset"]:hover,
-input[type="reset"]:hover {
-  background: color-mix(in srgb, var(--accent) 20%, var(--bg-lighter) 80%);
-  border-color: var(--accent);
+  background: hsl(290, 50%, 20%);
+  color: hsl(330, 100%, 85%);
+  border: 1px solid hsl(330, 100%, 40%);
 }
 
 /* Details & Summary */
 details {
-  background: var(--bg-darker);
-  border: 1px solid var(--border);
+  background: hsl(290, 50%, 10%);
+  border: 1px solid hsl(330, 100%, 30%);
   border-radius: 2px;
   padding: 0.5rem 0.75rem;
   margin: 0.5rem 0;
 }
 
 details[open] {
-  background: var(--bg-lighter);
+  background: hsl(290, 50%, 12%);
 }
 
 summary {
-  color: var(--accent-light);
+  color: hsl(330, 100%, 75%);
   font-weight: 700;
   cursor: pointer;
   padding: 0.25rem 0;
@@ -574,11 +546,12 @@ summary::-webkit-details-marker {
 }
 
 summary:hover {
-  color: var(--accent);
+  color: hsl(330, 100%, 85%);
 }
 
 summary:focus {
-  background: var(--bg-lighter);
+  outline: 1px solid hsl(330, 100%, 60%);
+  outline-offset: 2px;
 }
 
 details > *:not(summary) {
@@ -587,23 +560,23 @@ details > *:not(summary) {
 
 /* Dialog */
 dialog {
-  background: var(--bg-darker);
-  color: var(--text);
-  border: 2px solid var(--accent);
+  background: hsl(290, 50%, 10%);
+  color: hsl(330, 100%, 90%);
+  border: 2px solid hsl(330, 100%, 50%);
   border-radius: 4px;
   padding: 0.75rem;
   max-width: 500px;
 }
 
 dialog::backdrop {
-  background: color-mix(in srgb, var(--bg) 90%, transparent 10%);
+  background: hsla(290, 50%, 5%, 0.8);
 }
 
 /* Output */
 output {
   display: inline-block;
   padding: 0.25rem 0.5rem;
-  background: var(--accent-dark);
+  background: hsl(330, 100%, 50%);
   color: white;
   border-radius: 2px;
   font-weight: 700;
@@ -615,20 +588,20 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 2px;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(330, 100%, 30%);
 }
 
 figure {
   margin: 0.75rem 0;
   padding: 0.5rem;
-  background: var(--bg-darker);
+  background: hsl(290, 50%, 10%);
   border-radius: 2px;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(330, 100%, 25%);
 }
 
 figcaption {
   margin-top: 0.5rem;
-  color: var(--secondary);
+  color: hsl(280, 70%, 75%);
   font-style: italic;
   text-align: center;
   font-size: 0.9em;
@@ -639,15 +612,15 @@ audio,
 video {
   width: 100%;
   border-radius: 2px;
-  border: 1px solid var(--border);
-  background: var(--bg-lighter);
+  border: 1px solid hsl(330, 100%, 30%);
+  background: hsl(290, 50%, 12%);
 }
 
 /* Canvas */
 canvas {
-  border: 1px solid var(--border);
+  border: 1px solid hsl(330, 100%, 30%);
   border-radius: 2px;
-  background: var(--bg-lighter);
+  background: hsl(290, 50%, 12%);
 }
 
 /* Meter */
@@ -655,17 +628,17 @@ meter {
   width: 100%;
   height: 24px;
   border-radius: 12px;
-  background: var(--bg-lighter);
-  border: 1px solid var(--border);
+  background: hsl(290, 50%, 15%);
+  border: 1px solid hsl(330, 100%, 30%);
 }
 
 meter::-webkit-meter-bar {
-  background: var(--bg-lighter);
+  background: hsl(290, 50%, 15%);
   border-radius: 12px;
 }
 
 meter::-webkit-meter-optimum-value {
-  background: var(--accent-dark);
+  background: hsl(330, 100%, 50%);
   border-radius: 12px;
 }
 
@@ -674,23 +647,23 @@ progress {
   width: 100%;
   height: 24px;
   border-radius: 12px;
-  border: 1px solid var(--border);
-  background: var(--bg-lighter);
+  border: 1px solid hsl(330, 100%, 30%);
+  background: hsl(290, 50%, 15%);
   overflow: hidden;
 }
 
 progress::-webkit-progress-bar {
-  background: var(--bg-lighter);
+  background: hsl(290, 50%, 15%);
   border-radius: 12px;
 }
 
 progress::-webkit-progress-value {
-  background: var(--accent-dark);
+  background: hsl(330, 100%, 50%);
   border-radius: 12px;
 }
 
 progress::-moz-progress-bar {
-  background: var(--accent-dark);
+  background: hsl(330, 100%, 50%);
   border-radius: 12px;
 }
 
@@ -703,9 +676,9 @@ svg {
 /* IFrame */
 iframe {
   width: 100%;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(330, 100%, 30%);
   border-radius: 2px;
-  background: var(--bg-darker);
+  background: hsl(290, 50%, 10%);
 }
 
 /* Layout Elements */
@@ -713,17 +686,17 @@ header[role="banner"] {
   text-align: center;
   padding: 0.75rem;
   margin-bottom: 0.75rem;
-  background: var(--bg-darker);
+  background: hsl(290, 50%, 10%);
   border-radius: 4px;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(330, 100%, 25%);
 }
 
 nav {
-  background: var(--bg-darker);
+  background: hsl(290, 50%, 10%);
   padding: 0.75rem;
   border-radius: 2px;
   margin-bottom: 0.75rem;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(330, 100%, 25%);
 }
 
 nav ul {
@@ -741,25 +714,25 @@ nav ul ul {
 }
 
 section {
-  background: var(--bg-darker);
+  background: hsl(290, 50%, 10%);
   padding: 0.75rem;
   border-radius: 4px;
   margin-bottom: 0.75rem;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(330, 100%, 25%);
 }
 
 section > header {
   margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid hsl(330, 100%, 25%);
 }
 
 article {
   margin-bottom: 0.75rem;
   padding: 0.75rem;
-  background: var(--bg);
+  background: hsl(290, 50%, 11%);
   border-radius: 2px;
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid hsl(330, 100%, 50%);
 }
 
 article header {
@@ -769,23 +742,23 @@ article header {
 article footer {
   margin-top: 0.5rem;
   padding-top: 0.5rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid hsl(330, 100%, 20%);
   text-align: right;
 }
 
 footer[role="contentinfo"] {
   text-align: center;
   padding: 0.75rem;
-  background: var(--bg-darker);
+  background: hsl(290, 50%, 10%);
   border-radius: 4px;
   margin-top: 0.75rem;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(330, 100%, 25%);
 }
 
 /* Mode indicator */
 header[role="banner"] h1 span::after {
   content: 'Dark Mode';
-  color: var(--accent-light);
+  color: hsl(330, 100%, 75%);
 }
 
 /* Responsive */
